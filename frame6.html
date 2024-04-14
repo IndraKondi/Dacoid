@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track your goal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .mobiledevice {
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .screen {
+            background: #fff;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1{
+            font-weight: 600;
+            float: left;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        button{
+            margin-top: 100px;
+        }
+        #alert{
+            background: linear-gradient(90.07deg, rgba(129, 157, 255, 0.28) 5.94%, rgba(16, 16, 16, 0) 76.45%);
+            padding: 5px;
+        }
+        #alert i{
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-left: 10px;
+        } 
+        #toggle1{
+            margin-left: 90px;
+            margin-top: 15px;
+            font-size: 40px;
+        }
+        #toggle2{
+            margin-left: 75px;
+            margin-top: 15px;
+            font-size: 40px;
+        }
+        #box{
+            box-shadow: gray 1px 1px 1px 1px;
+            border-radius: 3px;
+            padding: 3px;
+        }
+        #train{
+            background: #8CB1FF99;
+        }
+        #search{
+            font-size: 50px;
+            background: linear-gradient(90.95deg, #DEE5FF 0.79%, #809AFF 99.18%);
+            border-radius: 50%;
+            padding: 2px;
+            margin-top: -30px;
+        }
+        #footicons{
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="mobiledevice">
+        <div class="screen">
+            <div class="header">
+                <span class="time">9:41</span>
+                <div class="right">
+                    <span class="network"><i class='bx bx-signal-4' ></i></span>
+                    <span class="wifi"><i class='bx bx-wifi'></i></span>
+                    <span class="battery"><i class='bx bxs-battery'></i></span>
+                </div>
+            </div>
+            <div class="main">
+                <a href="frame7.html" style="background-color: gray;padding:2px;float:left;border-radius:5px;">&lt;</a>
+                <p class="text-20px text-center font-Roboto-[600] mb-2">Workout Tracker</p>
+            </div>
+            <img src="graph.jpg">
+            <div id="alert" class="flex rounded mt-4">
+                <i class='bx bxs-error-circle'></i>
+                <p class="text-black-500 text-sm ml-2">You've burned fewer calories than yesterday. Time to get moving! </p>
+            </div>
+            <div class="upcoming mt-4">
+                <h1 class="text-12px font-Roboto-[600] mb-2">Upcoming Workout</h1><br>
+                <div id="box" class="flex justify-between items-center mt-4">
+                    <div class="flex items center bg-white-500 shadow-gray-100">
+                        <img src="https://s3-alpha-sig.figma.com/img/4aee/a404/269733701b8604f00f8ab3dbc8874dc4?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W~R5jLwDlFZg5jA64xQhhXbvhiOqzfoczemNjyW41IVUCfJ07EPR-hsYnSBBRI2sqofehWaWTuQY~6RvVQ3wD76Uk4Txe5bN9Yj1DViahbdVfdkonHpB-PV-nkAvCb3M2NCNr6qtm~WbCe8Ev5zORs0VERmpMiOOhbBv355jujI8R0aeICn1CHOqALGYLcoqFrac56bs-WVo5jgsmBTg7gf1NHO-AuLwLmlrvKIaHMDoOPg1EhdNJrWE2shP4dNuAzmevLfNGzn1tgxrdGBTo~lSYqtGIlBfZOQfGq9c5AuV7OKylc4iRvLNCto3-0o-1ytNSDtJ1gRJESlnAmuicQ__" class="w-16 h-16 rounded-full ml-4">
+                        <div class="ml-4">
+                            <p class="text-black  text-sm">Full Body Workout</p>
+                            <p class="text-black text-sm">Today, 3 PM</p>
+                        </div>
+                        <i id="toggle1" class='bx bxs-toggle-left' style='color:rgba(24,79,212,0.95)'></i>
+                    </div>
+                </div>
+                <div id="box" class="flex justify-between items-center  mt-4 mb-2">
+                    <div class="flex items center">
+                        <img src="https://s3-alpha-sig.figma.com/img/5688/dda6/63ce83a9876ee1cadf652148a636fe39?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AqtSmY1k0iQ8zli~s3WMSgjesxoSBX573f59fyG3X26w9pIUPYo3nnz3m3c4qUGEIovIU09HBtKVrkQySapb0bh8Yp8U1FJK5aPFsozGeJ8X861G5sPhGHKYlsLopZDDDwAa6ARD3e6uHOn6FB3FULjSyMzWCM9Uf3ARLQk-RlKJA8a-wiR7virfjjVWh4IzgnqiQbjrIqzXxccxMsIXsy0zZjzxEuZlEglquyGS6~c4lWjn~qF0tc8kXABthnR~PLAlkKsLKaMV7GtrCE90MqDMlogLvYNaTUjWgiQ2UvuzhlOWODEEhPSJhpWAX-cKKrst9CGnC6Km~BR-DEGKKg__" class="w-16 h-16 rounded-full ml-4">
+                        <div class="ml-4">
+                            <p class="text-black text-sm">Upper Body Workout</p>
+                            <p class="text-black text-sm">4 Feb, 3:30 pm</p>
+                        </div>
+                        <i id="toggle2" class='bx bxs-toggle-left' style='color:rgba(24,79,212,0.95)'></i>
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-12px font-Roboto-[600] mb-2">What Do You Want to Train</h1><br>
+            <div id="train" class="flex justify-between items-center rounded p-4 mt-4">
+                <div class="ml-4">
+                    <p class="text-black text-sm">Full Body Workout</p>
+                    <p class="text-black text-sm">Arms<br>Chest<br>Legs</p>
+                </div>
+                <img src="https://s3-alpha-sig.figma.com/img/23ae/977c/32610d884493905711642300c8cc67c0?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mu33qv9pYMsUqYlc9TFa5ztiZhwNCioQkCJ4s~C5W9TtHezEYCOvLE9X3I4rvzFgZJ1X4FDgOQwtkiNovuk7EWLhsinm8Sody3hycvElP3~J6V4oLgXkoHjd~O-oFgMKfjnYA~XKv9WfsKfotsK0WJ0gEjvTY~LXvi34bZZdbcMOZ-EEk5yKQ9kpACihIFgANBY-PN7NpvZN-0p1i05GsvdVvhx9LzOQLnTRmbUJakdyx3pqot3txCBZSpXDnnHJiDlwZwE-j-x84-yE2snCCUTn~LsZBbvKtpP7a1nl9h5I6Tkl503oojKuwQs~zH9rUa30hrt4I3WvV8Gkk5wwHg__" class="w-16 h-16 bg-gray-200 rounded-full p-2 mr-4">
+            </div>
+            <div class="footer">
+            <div id="footicons" class="flex justify-evenly cursor-pointer center p-4">
+                <i id="home" class='bx bx-home'></i>
+                <i id="message" class='bx bxl-messenger'></i>
+                <i id="search" class='bx bx-search'></i>
+                <i id="photo" class='bx bx-camera'></i>
+                <i id="user" class='bx bxs-user'></i>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("search").addEventListener("click", function () {
+            alert("Search functionality is not yet implemented");
+        });
+
+        document.getElementById("train").addEventListener("click", function () {
+            alert("Full Body Workout is selected");
+        });
+        document.getElementById("toggle1").addEventListener("click", function () {
+            this.classList.toggle("toggled"); // Toggle the 'toggled' class on click
+            alert("Toggled Full Body Workout!");
+        });
+
+        document.getElementById("toggle2").addEventListener("click", function () {
+            this.classList.toggle("toggled"); // Toggle the 'toggled' class on click
+            alert("Toggled Upper Body Workout!");
+        });
+        document.getElementById("footicons").addEventListener("click", function (event) {
+            const clickedElement = event.target;
+            const iconId = clickedElement.id;
+            switch (iconId) {
+                case "home":
+                    alert("Home icon clicked!");
+                    break;
+                case "message":
+                    alert("Messenger icon clicked!");
+                    break;
+                case "search":
+                    alert("Search icon clicked!");
+                    break;
+                case "photo":
+                    alert("Camera icon clicked!");
+                    break;
+                case "user":
+                    alert("User icon clicked!");
+                    break;
+                default:
+                    break;
+            }
+        });
+    </script>
+</body>
+
+</html>

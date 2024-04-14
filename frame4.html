@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track your goal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .mobiledevice {
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .screen {
+            background: #fff;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1{
+            font-weight: 600;
+            float: left;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        button{
+            margin-top: 200px;
+        }
+        .anotherway{
+            margin-top: 15px;
+        }
+        .anotherway i{
+            border: 1px solid gray;
+            padding: 10px;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="mobiledevice">
+        <div class="screen">
+            <div class="header">
+                <span class="time">9:41</span>
+                <div class="right">
+                    <span class="network"><i class='bx bx-signal-4' ></i></span>
+                    <span class="wifi"><i class='bx bx-wifi'></i></span>
+                    <span class="battery"><i class='bx bxs-battery'></i></span>
+                </div>
+            </div>
+            <p class="text-20px font-Roboto-[600]">Welcome Back</p>
+            <input type="email" placeholder="Email" id="email" class="w-full border-2 bg-gray-200 border-gray-300 hover:border-blue-500 p-2 rounded-md mt-4 mb-4">
+            <input type="password" placeholder="Password" id="password" class="w-full border-2 bg-gray-200 border-gray-300 hover:border-blue-500 p-2 rounded-md mb-4">
+            <a href="#forgetpassword.html" class="w-full text-grey-50 underline">Forgot your Password?</a>
+            <button id="signin-btn" class="bg-blue-500 text-white p-2 rounded-md w-full">Sign In</button>
+            <center>Or</center>
+            <center><div class="anotherway">
+                <i class='bx bxl-google mr-10'></i>
+                <i class='bx bxl-facebook'></i>
+            </div></center>
+            <p class="font-Montserrat align-center mt-4 ">Don’t have an account yet?<a href="frame3.html" class="text-blue-500 underline">Create an account</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("signin-btn").addEventListener("click", function() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            if (email && password) {
+                window.location.href = "frame5.html";
+            } else {
+                alert("Please enter valid email and password.");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track your goal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .mobiledevice {
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .screen {
+            background: #fff;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1{
+            font-weight: 600;
+            float: left;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        #item:hover{
+            border: 2px solid blue;
+        }
+        button{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="mobiledevice">
+        <div class="screen">
+            <div class="header">
+                <span class="time">9:41</span>
+                <div class="right">
+                    <span class="network"><i class='bx bx-signal-4' ></i></span>
+                    <span class="wifi"><i class='bx bx-wifi'></i></span>
+                    <span class="battery"><i class='bx bxs-battery'></i></span>
+                </div>
+            </div>
+            <p class="text-20px text-center font-Roboto-[600] mb-8">What are your goals?</p>
+            <div class="items">
+                <div id="item" class="bg-gray-200 rounded flex justify-between p-2 mt-4 mb-4">
+                    <p>Weight Loss</p>
+                    <input type="checkbox" id="wl">
+                </div>
+                <div id="item" class="bg-gray-200 rounded flex justify-between p-2 mb-4">
+                    <p>Muscle Gain</p>
+                    <input type="checkbox" id="mg">
+                </div>
+                <div id="item" class="bg-gray-200 rounded flex justify-between p-2 mb-4">
+                    <p>Flexibility and Mobility</p>
+                    <input type="checkbox" id="fandm">
+                </div>
+                <div id="item" class="bg-gray-200 rounded flex justify-between p-2 mb-4">
+                    <p>General Fitness</p>
+                    <input type="checkbox" id="gf">
+                </div>
+                <div id="item" class="bg-gray-200 rounded flex justify-between p-2 mb-4">
+                    <p>Event - specific training</p>
+                    <input type="checkbox" id="e-st">
+                </div>
+                <div id="item" class="bg-gray-200 rounded flex justify-between p-2 mb-4">
+                    <p>Mindfulness and Mental Health</p>
+                    <input type="checkbox" id="mmh">
+                </div>
+                <button id="confirm-btn" class="bg-blue-500 text-white p-2 rounded-md w-full">Confirm</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("confirm-btn").addEventListener("click", function() {
+            var checkboxes = ["wl", "mg", "fandm", "gf", "e-st", "mmh"];
+            var isChecked = false;
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (document.getElementById(checkboxes[i]).checked) {
+                    isChecked = true;
+                    break;
+                }
+            }
+            console.log("isChecked:", isChecked);
+            if (isChecked) {
+                window.location.href = "frame6.html";
+            } else {
+                alert("Please select at least one goal.");
+            }
+        });
+    </script>
+</body>
+
+</html>

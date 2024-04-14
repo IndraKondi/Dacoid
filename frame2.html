@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track your goal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .mobiledevice {
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .screen {
+            background: #fff;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1{
+            font-weight: 600;
+            float: left;
+            top: 499px;
+            left: 16px;
+            gap: 0px;
+            opacity: 0px;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        p{
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.5px;
+            text-align: left;
+            top: 538px;
+            width: 343px;
+            left: 16px;
+            height: 60px;
+        }
+        #next{
+            background: linear-gradient(90.95deg, #DEE5FF 0.79%, #809AFF 99.18%);
+            border-radius: 50%;
+            float:right;
+            padding: 20px;
+            border: 1px solid #89A1FF;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="mobiledevice">
+        <div class="screen">
+            <div class="header">
+                <span class="time">9:41</span>
+                <div class="right">
+                    <span class="network"><i class='bx bx-signal-4' ></i></span>
+                    <span class="wifi"><i class='bx bx-wifi'></i></span>
+                    <span class="battery"><i class='bx bxs-battery'></i></span>
+                </div>
+            </div>
+            <a href="frame3.html" class="text-blue-500 font-semibold text-sm mb-2 float-right">Skip</a>
+            <div class="text-center mb-4">
+                <img src="https://s3-alpha-sig.figma.com/img/9958/8bb7/dbf14a6d26ec54e2ba9e71eaef184f6b?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Wr3KQ~d1yUj8ihEHiaH7fqq2Bx87CveYvGg5WfoTnraj4r5QDk9Rs2g7PQ0NkiePRuEs015f2Scvkp9djImftRb7vIN0Q436lUOUi2Vz0HMN2YLBsrUwlsxwHK4~i~GT7KGdOrwjVV045VwrAdEFTsIHU5OFwbyLFidv7viJwMQL~Dj1dO58aVn70O0qclkztMmmGqgp5sbPUTTBET0FqbqH2YDMASEQdPn-Eamptqvrv8K6eu-nsZ5Tr9lKIAKKP4MB5iSZncm46y5fepqMHCd~cdCg13TMWcF-QtyOF1YrT3NN~w4WQDoFpdPZYcVqBqLyN6pDrkUSf-~AcMV5VQ__"
+                    class="w-352 h-552 mx-auto mt-8 mb-4" alt="Goal image"><br>
+                <h1 class="text-20px font-[600] font-Montserrat mt-8 mb-2 ">Get Burn</h1><br><br>
+                <p class="text-gray-500">Let’s keep burning to achieve your goals, it hurts only temporarily, if you give up now you will be in pain forever</p>
+            </div>
+            <div id="next" class="font-2xl rounded-full mt-8 mr-4 mb-4">&lt;</div>
+        </div>
+    </div>
+</body>
+
+</html>

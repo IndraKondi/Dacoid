@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track your goal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .mobiledevice {
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .screen {
+            background: #fff;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1{
+            font-weight: 600;
+            float: left;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        #six{
+            background: linear-gradient(270deg, #8DA4FF -0.62%, #D1DBFF 100.68%);
+
+        }
+        .box{
+            width: 62.67px;
+            height: 76.24px;
+            top: 0.62px;
+            left: 140.17px;
+            border-radius: 3px;
+            opacity: 0px;
+            padding-top: 8px;
+
+        }
+        #search{
+            font-size: 50px;
+            background: linear-gradient(90.95deg, #DEE5FF 0.79%, #809AFF 99.18%);
+            border-radius: 50%;
+            padding: 2px;
+            margin-top: -30px;
+        }
+        #footicons{
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="mobiledevice">
+        <div class="screen">
+            <div class="header">
+                <span class="time">9:41</span>
+                <div class="right">
+                    <span class="network"><i class='bx bx-signal-4' ></i></span>
+                    <span class="wifi"><i class='bx bx-wifi'></i></span>
+                    <span class="battery"><i class='bx bxs-battery'></i></span>
+                </div>
+            </div>
+            <div class="main">
+                <a href="frame6.html" style="background-color: gray;padding:2px;float:left;border-radius:5px;">&lt;</a>
+                <p class="text-20px text-center font-Roboto-[600] mb-2">Workout Schedule</p>
+            </div>
+            <p class="text-sm-12px text-center font-Roboto-[600] mb-2">&lt;Feb 24&gt;</p>
+            <div class="flex justify-between">
+                <div class="box">
+                    <p class="text-center">5</p>
+                    <p class="text-center">Mon</p>
+                </div>
+                <div id="six" class="box">
+                    <p class="text-center">6</p>
+                    <p class="text-center">Tue</p>
+                </div>
+                <div class="box">
+                    <p class="text-center">7</p>
+                    <p class="text-center">Wed</p>
+                </div>
+                <div class="box">
+                    <p class="text-center">8</p>
+                    <p class="text-center">Thu</p>
+                </div>
+                <div class="box">
+                    <p class="text-center">9</p>
+                    <p class="text-center">Fri</p>
+                </div>
+            </div>
+            <div class="time">
+                <div class="time-slot mb-1">06:00 AM</div><hr>
+                <div class="time-slot mb-1">07:00 AM</div><hr>
+                <div class="time-slot mb-1">08:00 AM</div><hr>
+                <div class="time-slot mb-1">09:00 AM</div><hr>
+                <div class="time-slot mb-1">10:00 AM</div><hr>
+                <div class="time-slot mb-1">11:00 AM</div><hr>
+                <div class="time-slot mb-1">12:00 PM</div><hr>
+                <div class="time-slot mb-1">01:00 PM</div><hr>
+                <div class="time-slot mb-1">02:00 PM</div><hr>
+                <div class="time-slot mb-1">03:00 PM</div><hr>
+                <div class="time-slot mb-1">04:00 PM</div><hr>
+                <div class="time-slot mb-1">05:00 PM</div><hr>
+                <i class='bx bxs-plus-circle' style="color:#b851af;font-size:60px;margin-top:-50px;float:right; position:relative;"></i>
+            </div>
+            <div id="footicons" class="flex justify-evenly center p-4">
+                <i class='bx bx-home'></i>
+                <i class='bx bxl-messenger'></i>
+                <i id="search" class='bx bx-search'></i>
+                <i class='bx bx-camera'></i>
+                <i class='bx bxs-user'></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
